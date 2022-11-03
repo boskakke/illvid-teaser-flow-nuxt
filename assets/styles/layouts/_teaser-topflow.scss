@@ -1,0 +1,316 @@
+:root {
+
+
+	--grid-gap: 1rem;
+	--t-gap: var(--space-3);
+	--t-main-font-size: var(--font-12);
+	--t-font-family: var(--font-alt);
+	--t-title-font-weight: 900;
+	--t-text-decoration-hover: none;
+	--t-image-transition: transform .3s ease-in-out;
+	--main-flow-grid-gap: 0;
+
+	@include md-up {
+		--t-main-font-size: 48px;
+		--main-flow-grid-gap: var(--space-4);
+	}
+
+	@media (pointer: fine) {
+		--t-image-transform-hover: scale(1.03);
+		--t-link-color-hover: #333;
+	}
+}
+
+.demo {
+	--bottom-demo-color: rgba(255, 0, 0, .2);
+	--main-demo-color: rgba(0, 0, 255, .2);
+	--side-demo-color: rgba(0, 255, 0, .2);
+}
+
+.container {
+	width: 100%;
+	max-width: 1240px;
+	margin: 2rem auto;
+	padding: 1rem;
+	position: relative;
+
+}
+
+.main-flow {
+	display: grid;
+	grid-template: var(--main-flow-grid-template, auto auto auto / 1fr);
+	gap: var(--main-flow-grid-gap);
+
+	@include md-up {
+		--main-flow-grid-template: auto / 2fr 1fr;
+
+		&--inverted {
+			--main-flow-grid-template: auto / 1fr 2fr;
+			--main-order: 2;
+			--sidebar-order: -1;
+		}
+	}
+
+	&__main {
+		order: var(--main-order);
+		background: var(--main-demo-color);
+
+
+	}
+
+	// SIDEBAR
+
+	&__side {
+
+		background: var(--side-demo-color);
+		order: var(--sidebar-order);
+		display: block;
+		width: 100%;
+
+
+		@include sm-down {
+			--t-border-top: var(--border);
+			--t-margin-top: var(--space-4);
+			--t-padding-top: var(--space-4);
+
+			.t-default {
+				--t-body-display: flex;
+				--t-body-align-items: center;
+			}
+		}
+
+		@include md-up {
+			--t-t-margin-top: var(--space-8);
+			flex-direction: column;
+
+			&--2 {
+				--t-flex-direction: column;
+				--t-font-size: var(--font-11);
+			}
+
+			&--3 {
+				--t-flex-direction: row;
+				--t-figure-flex: 0 0 180px;
+				--t-gap: var(--space-5);
+				--t-font-size: var(--font-8);
+				--t-body-display: flex;
+				--t-body-align-items: center;
+				--t-t-margin-top: var(--space-6);
+			}
+		}
+	}
+
+	// BOTTOM ROW
+	&__bottom {
+		background: var(--bottom-demo-color);
+		order: 10;
+		display: var(--bottom-display, block);
+		grid-template: var(--buttom-grid-template, auto / 1fr);
+		gap: var(--grid-gap);
+
+		@include sm-down {
+			--t-border-top: var(--border);
+			--t-margin-top: var(--space-4);
+			--t-padding-top: var(--space-4);
+
+			.t-default {
+				--t-body-display: flex;
+				--t-body-align-items: center;
+			}
+		}
+
+		@include md-up {
+			border-top: var(--border);
+			padding-top: var(--space-8);
+			grid-column: span 2;
+			--bottom-display: grid;
+
+			&--2 {
+				--t-font-size: var(--font-11);
+				--bottom-display: grid;
+				--buttom-grid-template: auto / 1fr 1fr;
+				--t-figure-flex: 0 0 180px;
+				--t-body-display: flex;
+				--t-body-align-items: center;
+			}
+
+			&--3 {
+				--t-font-size: var(--font-8);
+				--bottom-display: grid;
+				--buttom-grid-template: auto / 1fr 1fr 1fr;
+				--t-figure-flex: 0 0 180px;
+				--t-body-display: flex;
+				--t-body-align-items: center;
+				--t-gap: var(--space-6);
+			}
+		}
+	}
+}
+
+
+// TEASER BOILTERPLATE 
+.t {
+	border-top: var(--t-border-top, none);
+	position: relative;
+	max-width: 100%;
+	flex-direction: var(--t-flex-direction);
+	display: flex;
+	gap: var(--t-gap);
+	margin: var(--t-margin, 0 0 var(--grid-gap));
+	color: var(--t-link-color, var(--link-color));
+	text-decoration: var(--t-text-decoration, var(--link-text-decoration));
+	padding-top: var(--t-padding-top);
+
+	&:hover {
+		--t-image-transform: var(--t-image-transform-hover, unset);
+		color: var(--t-link-color-hover, var(--link-color-hover));
+		text-decoration: var(--t-text-decoration-hover, var(--link-text-decoration-hover));
+
+	}
+
+	&+.t {
+		margin-top: var(--t-t-margin-top);
+		border-top: var(--t-border-top);
+	}
+
+
+
+	&__title {
+		font-size: var(--t-font-size, 40px);
+		margin: var(--t-title-margin, 0);
+		font-weight: var(--t-title-font-weight, 700);
+		line-height: 1.1;
+		font-family: var(--t-font-family);
+	}
+
+	&__figure {
+		flex: var(--t-figure-flex, unset);
+		overflow: hidden;
+		border-radius: var(--border-radius);
+		display: var(--t-figure-display, block);
+	}
+
+	&__image {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		transition: var(--t-image-transition, unset);
+		transform: var(--t-image-transform, unset);
+	}
+
+	&__body {
+		padding: var(--t-body-padding, 0);
+		overflow: hidden;
+		flex: var(--t-body-flex, unset);
+		display: var(--t-body-display, initial);
+		align-items: var(--t-body-align-items, unset);
+
+	}
+}
+
+.t-main {
+	--t-flex-direction: column;
+	--t-font-size: var(--t-main-font-size);
+}
+
+@include sm-down {
+
+	// Teaser image right on mobile
+	.t-default:not(.t-main) {
+		flex-direction: row;
+		--t-font-size: 18px;
+
+		.t__body {
+			flex-grow: 1;
+		}
+
+		figure {
+			order: 2;
+			flex: 0 0 120px;
+		}
+	}
+
+	// Teaser image right on mobile
+	.t-hide-image:not(.t-main) {
+		--t-font-size: 20px;
+		--t-flex-direction: row;
+
+
+		.t__figure {
+			--t-figure-display: none
+		}
+	}
+
+	// Teaser vertical on mobile
+	.t-vertical:not(.t-main) {
+		--t-font-size: var(--font-7);
+		--t-flex-direction: column;
+		flex: 0 0 50%;
+		float: left;
+		width: 50%;
+	}
+
+	// Teaser image right on mobile
+	.t-large:not(.t-main) {
+		--t-font-size: var(--font-12);
+		--t-flex-direction: column;
+		flex: 0 0 100%;
+
+	}
+
+	// makse shure last teaser after .t-vertical clears float from t.vertical.
+	.t-vertical+.t:not(.t-vertical) {
+		clear: left;
+	}
+}
+
+@include sm-down {
+
+	.main-flow__side,
+	.main-flow__bottom {
+		.t-vertical {
+
+			width: calc(50% - var(--grid-gap) / 2);
+
+			&+.t-vertical {
+				margin-left: calc(var(--grid-gap));
+			}
+
+			.t__body {
+				padding: 0;
+			}
+		}
+
+	}
+}
+
+
+.teaserControls {
+	position: absolute;
+	top: 0;
+}
+
+.controls {
+	border-radius: 5px;
+	background-image: linear-gradient(to bottom, lighten(#333, 4%), #333);
+	border: 1px solid #444;
+	z-index: 2;
+	width: 100%;
+	margin: 4rem 0;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	gap: 1rem;
+	position: sticky;
+	top: 1rem;
+	color: #999;
+
+	label {
+		cursor: pointer;
+	}
+
+	.radio {
+		display: flex;
+		gap: 1rem;
+	}
+}

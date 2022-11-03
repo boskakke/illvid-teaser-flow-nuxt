@@ -1,0 +1,256 @@
+{
+	"articles": [
+		{
+			"image": "/files/ill/production/2022/10/17152018/20221017-091456-L-1920x1280we.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Militærekspert: Det her er fremtidens krigsførelse",
+			"category": "Krigsteknologi"
+		},
+		{
+			"image": "/files/ill/production/2022/10/14100419/Minihjerneirotter.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Forskere transplanterer menneskelige hjerneceller ind i rotter",
+			"category": "Hjernen"
+		},
+		{
+			"image": "/files/ill/production/2022/10/14104053/abvshutterstock_2146570171.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Ny undersøgelse: Så meget gavner elcyklen din sundhed",
+			"category": "Sundhed"
+		},
+		{
+			"image": "/files/ill/production/2022/05/09174042/haemorider-teaser.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Hvordan opstår hæmorider?",
+			"category": "Kroppen"
+		},
+		{
+			"image": "/files/ill/production/2022/10/14004543/molotovcocktail.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Uskyldig mand løsladt efter 35 år takket være MythBusters",
+			"category": "Fysik"
+		},
+		{
+			"image": "/files/ill/production/2022/10/06133721/kulkraftvaerk-teaser.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Skal kulkraftværker virkelig til at køre på uran?",
+			"category": "Atomkraft"
+		},
+		{
+			"image": "/files/ill/production/2022/06/17101733/Skraldespand1.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Oprydning i menneskets stamtræ: Flere arter ryger ud med skraldet",
+			"category": "Fortidsmennesker"
+		},
+		{
+			"image": "/files/ill/production/2022/10/11160422/avaegt.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Sådan holder du vægten, når du har tabt dig",
+			"category": "Sundhed"
+		},
+		{
+			"image": "/files/ill/production/2022/10/13143907/Felix-baumgartner.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Felix Baumgartner var i frit fald 39 kilometer over Jorden: Det her var hans største frygt",
+			"category": "Rumfart"
+		},
+		{
+			"image": "/files/ill/production/2022/10/11130535/aldring.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Ny undersøgelse: Så meget hurtigere ældes mænd end kvinder",
+			"category": "Aldring"
+		},
+		{
+			"image": "/files/ill/production/2022/10/11161441/loevfroe-ny.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Se billederne: Frøerne omkring Tjernobyl har fundet en helt særlig overlevelsesmetode",
+			"category": "Dyr"
+		},
+		{
+			"image": "/files/ill/production/2022/01/03121624/bi.jpeg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Sådan forvandler du trodsige teenagebørn til kærlige voksne",
+			"category": "Adfærd"
+		},
+		{
+			"image": "/files/ill/production/2022/10/06142126/afor.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Honningbiens gift nedkæmper aggressiv brystkræft",
+			"category": "Kræft"
+		},
+		{
+			"image": "/files/ill/production/2022/10/14100419/Minihjerneirotter.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Hvordan opstår hæmorider?",
+			"category": "Kroppen"
+		},
+		{
+			"image": "/files/ill/production/2020/01/27085726/hvad-udleder-mest-co2.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Ny undersøgelse: Så meget gavner elcyklen din sundhed",
+			"category": "Sundhed"
+		},
+		{
+			"image": "/files/ill/production/2020/01/23095723/san-jose-mine.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Fremtidens byer skal redde klimaet",
+			"category": "Klimaforandringer"
+		},
+		{
+			"image": "/files/ill/production/2021/09/21150639/lucky-luke-skygge2.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Sort sol 2022 - Sådan ser du det",
+			"category": "Fugle"
+		},
+		{
+			"image": "/files/ill/production/2020/09/03110321/edderkopper-i-danmark.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Hvad nu hvis Jorden ændrede bane om Solen?",
+			"category": "Jorden"
+		},
+		{
+			"image": "/files/ill/production/2022/10/18102839/ahiv32.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Danske forskere har taget et vigtigt skridt i jagten på en hiv-kur",
+			"category": "Sundhed"
+		},
+				{
+			"image": "/files/ill/production/2022/10/14100419/Minihjerneirotter.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Forskere transplanterer menneskelige hjerneceller ind i rotter",
+			"category": "Hjernen"
+		},
+		{
+			"image": "/files/ill/production/2022/10/14104053/abvshutterstock_2146570171.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Ny undersøgelse: Så meget gavner elcyklen din sundhed",
+			"category": "Sundhed"
+		},
+		{
+			"image": "/files/ill/production/2022/05/09174042/haemorider-teaser.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Hvordan opstår hæmorider?",
+			"category": "Kroppen"
+		},
+		{
+			"image": "/files/ill/production/2021/03/04084923/blodtyper.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Blodtyper - deres egenskaber og forskelle",
+			"category": "Kredsløbet"
+		},
+		{
+			"image": "/files/ill/production/2022/06/03105821/topbillede-gal-mand-5.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Tvangstanker tager hjernen som gidsel",
+			"category": "Sygdomme"
+		},
+		{
+			"image": "/files/ill/production/2022/09/27132707/kraeftsygdomme.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Dramatisk stigning: Langt flere personer under 50 år får kræft",
+			"category": "Medicin"
+		},
+		{
+			"image": "/files/ill/production/2022/09/23112436/kong-charles-homeopati.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Kong Charles møder kritik: Er fortaler for kontroversiel behandling",
+			"category": "Medicin"
+		},
+		{
+			"image": "/files/ill/production/2022/09/22124603/vitaminpille.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Ny undersøgelse: Vitamintilskud kan holde din hukommelse skarp hele livet",
+			"category": "Medicin"
+		},
+		{
+			"image": "/files/ill/production/2022/06/13162128/topbillede-klippe-HIV-ud-af-kroppen1.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Efter 40 års kamp: Snart kan vi klippe hiv ud af kroppen",
+			"category": "Aids"
+		},
+		{
+			"image": "/files/ill/production/2020/01/27085726/hvad-udleder-mest-co2.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Her er de største CO2-syndere",
+			"category": "Klimaforandringer"
+		},
+		{
+			"image": "/files/ill/production/2021/07/16130232/Bitcoin.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Bitcoin belaster klimaet mere end kødproduktion",
+			"category": "Klimaforandringer"
+		},
+		{
+			"image": "/files/ill/production/2022/06/27060454/TEASER-groent-hjem.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Guide: Løs klimakrisen fra dit hjem",
+			"category": "Klimaforandringer"
+		},
+		{
+			"image": "/files/ill/production/2022/10/03143539/aabbcc.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Uddød vidunderplante fra antikken menes genfundet",
+			"category": "Planter"
+		},
+		{
+			"image": "/files/ill/production/2021/10/07095918/vintertid-sommertid.jpeg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Derfor stiller du dit ur til vintertid",
+			"category": "Årstider"
+		},
+		{
+			"image": "/files/ill/production/2022/10/17133639/aaste.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Astronomer: Her er asteroiden, der er tættest på Solen",
+			"category": "Asteroider"
+		},
+		{
+			"image": "/files/ill/production/2022/10/14145509/Mars-top.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Ny undersøgelse: Tidligere liv på Mars udryddede sig selv i en katastrofe",
+			"category": "Mars"
+		},
+		{
+			"image": "/files/ill/production/2022/06/29133853/Venus-og-Jorden-teaser.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Hvad nu hvis Jorden ændrede bane om Solen?",
+			"category": "Jorden"
+		},
+		{
+			"image": "/files/ill/production/2022/10/12131443/heliosfaeren.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Forskere gør mystisk opdagelse på kanten af vores solsystem",
+			"category": "Solsystemet"
+		},
+		{
+			"image": "/files/ill/production/2022/10/13143907/Felix-baumgartner.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Felix Baumgartner var i frit fald 39 kilometer over Jorden: Det her var hans største frygt",
+			"category": "Rumfart"
+		},
+		{
+			"image": "/files/ill/production/2021/01/13133107/IQ-hvad-er.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Derfor har din IQ stor betydning",
+			"category": "IQ-test"
+		},
+		{
+			"image": "/files/ill/production/2018/10/14004736/hoejeste-intelligenskvotient.png",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Hvad er den højeste IQ?",
+			"category": "IQ-test"
+		},
+		{
+			"image": "/files/ill/production/2018/10/14101308/intelligenshistorie.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "IQ: Hvem opfandt IQ-testen?",
+			"category": "IQ-test"
+		},
+		{
+			"image": "/files/ill/production/2021/01/26094952/verdens-h%C3%B8jeste-iqer.jpg",
+			"trumpet": "Lorem ipsum dolor",
+			"header": "Her er verdens højeste IQ'er",
+			"category": "IQ-test"
+		}
+	]
+}

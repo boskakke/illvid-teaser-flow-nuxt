@@ -1,0 +1,156 @@
+.txt-sm {
+	font-size: var(--font-0);
+}
+
+@each $key, $val in $spacers {
+	.pt-#{$key} {
+		padding-top: var(--space-#{$key});
+	}
+	.pb-#{$key} {
+		padding-bottom: var(--space-#{$key});
+	}
+	.mt-#{$key} {
+		margin-top: var(--space-#{$key});
+	}
+	.mb-#{$key} {
+		margin-bottom: var(--space-#{$key});
+	}
+	@include sm-down {
+		.sm-pt-#{$key} {
+			padding-top: var(--space-#{$key});
+		}
+		.sm-pb-#{$key} {
+			padding-bottom: var(--space-#{$key});
+		}
+		.sm-mt-#{$key} {
+			margin-top: var(--space-#{$key});
+		}
+		.sm-mb-#{$key} {
+			margin-bottom: var(--space-#{$key});
+		}
+	}
+}
+
+
+
+.hidden {
+	display: none;
+}
+.hidden-md-up {
+	@include md-up {
+		display: none;
+	}
+}
+.hidden-md-down {
+	@include md-down {
+		display: none;
+	}
+}
+.hidden-xs-down {
+	@include xs-down {
+		display: none;
+	}
+}
+.hidden-sm-down {
+	@include sm-down {
+		display: none;
+	}
+}
+.hidden-lg-up {
+	@include lg-up {
+		display: none;
+	}
+}
+.hidden-lg-down {
+	@include lg-down {
+		display: none;
+	}
+}
+.hidden-xl {
+	@include xl-up {
+		display: none;
+	}
+}
+// .text-center {
+// 	text-align: center;
+// }
+// .margin-auto {
+// 	margin-left: auto;
+// 	margin-right: auto;
+// }
+
+// %flex-center,
+// .flex-center {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// }
+// .text-align-left {
+// 	text-align: left;
+// }
+// .text-align-center {
+// 	text-align: center;
+// }
+
+// .lg-mt-1 {
+// 	@include md-up {
+// 		margin-top: var(--space-4);
+// 	}
+// }
+
+// %close {
+// 	padding: 0;
+// 	margin: 0;
+// 	appearance: none;
+// 	width: 1.6rem;
+// 	height: 1.6rem;
+// 	border: 0;
+// 	background-color: transparent;
+
+// 	cursor: pointer;
+// 	span {
+// 		height: 2px;
+// 		width: 22px;
+// 		transform-origin: center center;
+// 		position: absolute;
+// 		top: 50%;
+// 		left: calc(50% - 11px);
+// 		background-color: var(--close-color, var(--body-color));
+// 		&:first-child {
+// 			transform: rotate(-45deg);
+// 		}
+// 		&:last-child {
+// 			transform: rotate(45deg);
+// 		}
+// 	}
+// }
+
+// %dot {
+// 	&:before {
+// 		content: '';
+// 		width: 0.25rem;
+// 		height: 0.25rem;
+// 		border-radius: 50%;
+// 		background-color: var(--body-700);
+// 		margin: 0 0.5em;
+// 		display: inline-block;
+// 		vertical-align: middle;
+// 	}
+// }
+
+// .overflow-hidden {
+// 	overflow: hidden;
+// }
+// .pos-relative {
+// 	position: relative;
+// }
+// .text-center-sm {
+// 	@include sm-down {
+// 		text-align: center;
+// 	}
+// }
+// .text-center-md {
+// 	@include md-only {
+// 		text-align: center;
+// 	}
+// }

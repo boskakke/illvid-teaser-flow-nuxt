@@ -1,0 +1,9 @@
+.fade-up {
+	transform: var(--intersection-transform);
+	opacity: 0;
+	transition: all var(--intersection-transition-timing) var(--ease) var(--delay);
+	&.loaded {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

@@ -1,0 +1,152 @@
+%grid {
+	display: grid;
+	gap: var(--grid-gap-row) var(--grid-gap-col);
+	grid-template: var(--grid-template, auto/[full-start] .1rem [main-start] repeat(6, [col-start] minmax(10px, 1fr)) [main-end] .1rem [full-end]);
+
+	@include md-up {
+		--grid-template: auto/[full-start] minmax(.5rem, 1fr) [main-start] repeat(12, [col-start] minmax(10px, var(--column-max-width))) [main-end] minmax(.5rem, 1fr) [full-end];
+	}
+
+	@include lg-up {
+		--grid-template: auto/[full-start] minmax(1rem, 1fr) [main-start] repeat(12, [col-start] minmax(10px, var(--column-max-width))) [main-end] minmax(1rem, 1fr) [full-end];
+	}
+}
+
+
+
+.grid {
+	@extend %grid;
+}
+
+
+.grid--full {
+	grid-column: full-start / full-end;
+}
+
+%deck {
+	display: grid;
+	grid-template: var(--gt);
+	grid-template-areas: var(--gta);
+	grid-gap: var(--space-8);
+
+	&>*:nth-child(1) {
+		grid-area: A;
+	}
+
+	&>*:nth-child(2) {
+		grid-area: B;
+	}
+
+	&>*:nth-child(3) {
+		grid-area: C;
+	}
+}
+
+.group {
+	&--deck-1 {
+		@extend %deck;
+		--gt: auto / 2fr 1fr;
+		--gta: 'A B' 'A C';
+	}
+
+	&--deck-2 {
+		@extend %deck;
+		--gt: auto / 1fr 2fr;
+		--gta: 'B A' 'C A';
+	}
+
+	&--deck-3 {
+		@extend %deck;
+		--gt: auto / 1fr 1fr 1fr;
+		--gta: 'A B C';
+	}
+
+	&--deck-4 {
+		@extend %deck;
+		--gt: auto / 1fr 1fr;
+		--gta: 'A B';
+	}
+
+	&--deck-5 {
+		@extend %deck;
+		--gt: auto / 1fr;
+		--gta: 'A';
+	}
+}
+
+.frontpage {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+}
+
+.slider {
+	display: flex;
+}
+
+
+
+:root {
+	--gap: clamp(1rem, 6vw, 2rem);
+	--gap: .5rem;
+	--full: minmax(var(--gap), 1fr);
+	--content: min(65ch, 100% - var(--gap) * 2);
+	--popout: minmax(0, 3rem);
+	--feature: minmax(0, 8rem);
+}
+
+html {
+	font-size: 20px;
+}
+
+.article-grid {
+	display: grid;
+	grid-gap: 0 var(--gap);
+	grid-template: auto / [full-start] var(--full) [feature-start] var(--feature) [popout-start] var(--popout) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(--feature) [feature-end] var(--full) [full-end];
+}
+
+.article-content {
+	grid-column: feature;
+
+	@include lg-up {
+		grid-column: content;
+	}
+}
+
+.article-content-lg {
+	grid-column: feature;
+
+	@include lg-up {
+		grid-column: popout;
+	}
+}
+
+.article-content-xl {
+	grid-column: feature;
+
+	@include lg-up {
+		grid-column: feature;
+	}
+}
+
+.article-content-xl--short {
+	grid-column: feature;
+
+	@include lg-up {
+		grid-column: feature-start / content-end;
+	}
+}
+
+.article-content-xxl {
+	grid-column: full;
+}
+
+
+
+
+
+.article {
+	&__content {
+		position: relative;
+	}
+}
