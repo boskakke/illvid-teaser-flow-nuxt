@@ -1,6 +1,4 @@
 :root {
-
-
 	--grid-gap: 1rem;
 	--t-gap: var(--space-3);
 	--t-main-font-size: var(--font-12);
@@ -12,7 +10,7 @@
 
 	@include md-up {
 		--t-main-font-size: 48px;
-		--main-flow-grid-gap: var(--space-4);
+		--main-flow-grid-gap: var(--space-6);
 	}
 
 	@media (pointer: fine) {
@@ -95,7 +93,7 @@
 				--t-font-size: var(--font-8);
 				--t-body-display: flex;
 				--t-body-align-items: center;
-				--t-t-margin-top: var(--space-6);
+				--t-t-margin-top: var(--space-10);
 			}
 		}
 	}
@@ -132,6 +130,7 @@
 				--t-figure-flex: 0 0 180px;
 				--t-body-display: flex;
 				--t-body-align-items: center;
+				--t-gap: var(--space-6);
 			}
 
 			&--3 {
