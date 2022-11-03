@@ -1,5 +1,5 @@
 <template>
-  <div class="main-flow" :class="{ 'main-flow--inverted': inverted }">
+  <div class="main-flow" :class="{ 'main-flow--inverted': settings.inverted }">
     <div class="main-flow__main" >
       <Teaser :teaser="teasers[0]" class="t-main" />
     </div>
@@ -16,6 +16,6 @@
 import { inject } from "@vue/runtime-core";
 
 
-let inverted = inject("inverted");
+let settings = inject("settings");
 let teasers = inject("teasers");
 </script>

@@ -17,17 +17,13 @@
             </label>
           </div>
         </div>
-        <div class="hidden-sm-down">
-          <label for="inverted-design">
-            <input
-              type="checkbox"
-              v-model="inverted"
-              value=""
-              id="inverted-design"
-            />
-            Inverted
-          </label>
-        </div>
+        
+         <button
+          @click="settings.inverted = !settings.inverted"
+          class="hesteknap hidden-sm-down"
+        >
+          <IconsInvert class="hest" />
+        </button>
         <button
           @click="settings.showDropdown = !settings.showDropdown"
           class="hesteknap hidden-md-up"
@@ -59,17 +55,18 @@ const teasers = await useNuxtApp().$articleFetch(
   `/wp-json/wp/v2/pages/${config.FRONTPAGE_ID}?with=contents,teasers,ancestor,contents.content.teasers.vocabularies`
 );
 
-const counter = ref(6);
-const inverted = ref(false);
+const counter = ref(3);
+
 const settings = reactive({
   showDropdown: false,
   showPalette: false,
+  inverted: false,
 });
 
 const teaserList = ref(teasers.data.contents.data[0].content.data.teasers.data);
 
 provide("teasers", teaserList);
-provide("inverted", inverted);
+
 provide("settings", settings);
 </script>
 

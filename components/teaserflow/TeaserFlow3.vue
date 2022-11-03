@@ -1,6 +1,6 @@
 <template>
   
-  <div class="main-flow" :class="{ 'main-flow--inverted': inverted }">
+  <div class="main-flow" :class="{ 'main-flow--inverted': settings.inverted }">
     <div class="main-flow__main">
       <Teaser :teaser="teasers[0]" class="t-main" />
     </div>
@@ -20,7 +20,7 @@ defineProps({
   //   required: true,
   // },
 });
-let inverted = inject("inverted");
+
 let teasers = inject("teasers");
 let settings = inject("settings");
 </script>
