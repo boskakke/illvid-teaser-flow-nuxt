@@ -1,0 +1,45 @@
+
+.teaserControls {
+	position: absolute;
+	top: 0;
+}
+
+.controls {
+	border-radius: 5px;
+	background-image: linear-gradient(to bottom, lighten(#333, 4%), #333);
+	border: 1px solid #444;
+	z-index: 2;
+	width: 100%;
+	margin: 0 0 2rem;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	gap: 1rem;
+	position: sticky;
+	top: 1rem;
+	color: #999;
+
+	label {
+		cursor: pointer;
+	}
+
+	.radio {
+		display: flex;
+		gap: 1rem;
+	}
+}
+
+.demo {
+	--bottom-demo-color: rgba(255, 0, 0, .2);
+	--main-demo-color: rgba(0, 0, 255, .2);
+	--side-demo-color: rgba(0, 255, 0, .2);
+}
+
+.container {
+	width: 100%;
+	max-width: 1240px;
+	margin: 0 auto 2rem auto;
+	padding: 1rem;
+	position: relative;
+
+}

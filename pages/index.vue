@@ -1,6 +1,9 @@
 <template>
   <div class="frontpage">
-    <nuxt-link to="/teaserflow">teaserflow</nuxt-link>
+    <div class="container">
+
+      <nuxt-link to="/teaserflow">Frontpage teaser widget</nuxt-link>
+    </div>
   </div>
 </template>
 
