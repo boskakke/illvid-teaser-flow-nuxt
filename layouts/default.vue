@@ -1,7 +1,7 @@
 <template>
   <div class="main"> 
     <div class="topmenu">
-      <img src="/logo.svg" alt="IllVId" class="logo"/>
+      <nuxt-link to="/"><img src="/logo.svg" alt="IllVId" class="logo"/></nuxt-link>
     </div>
     <slot />
   </div>

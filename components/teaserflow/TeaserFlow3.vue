@@ -1,10 +1,10 @@
 <template>
   
-  <div class="main-flow" :class="{ 'main-flow--inverted': settings.inverted }">
-    <div class="main-flow__main">
+  <div class="flex-list" :class="{ 'flex-list--inverted': settings.inverted }">
+    <div class="flex-list__main">
       <Teaser :teaser="teasers[0]" class="t-main" />
     </div>
-    <div class="main-flow__side main-flow__side--2">
+    <div class="flex-list__side flex-list__side--2">
       <Teaser :teaser="teasers[1]" />
       <Teaser :teaser="teasers[2]" />
     </div>
