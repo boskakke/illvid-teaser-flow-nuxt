@@ -11,15 +11,15 @@
 	border: 1px solid #444;
 	z-index: 2;
 	width: 100%;
-	margin: 0 0 2rem;
+	margin: 0 0 .5rem;
 	display: flex;
 	align-items: center;
-	padding: 1rem;
+	padding: .5rem;
 	gap: 1rem;
 	position: sticky;
 	top: 1rem;
 	color: #999;
-
+	font-size: var(--font-4);
 	label {
 		cursor: pointer;
 	}
@@ -40,7 +40,7 @@
 	width: 100%;
 	max-width: 1240px;
 	margin: 0 auto 2rem auto;
-	padding: 1rem;
+	padding: 0 1rem;
 	position: relative;
 
 }
