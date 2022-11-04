@@ -18,10 +18,12 @@
 		@include lg-only {
 			--t-figure-size: 140px;
 		}
+
 		@include xl-up {
 			--t-figure-size: 160px;
 		}
 	}
+
 	.main-flow__bottom--3 {
 		@include md-only {
 			--t-figure-size: 120px;
@@ -218,7 +220,7 @@
 
 	&__category {
 		display: var(--t-cat-display, inline-flex);
-		font-size: var(--t-category-font-size, var(--font-1));
+		font-size: var(--t-cat-font-size, var(--font-0));
 		font-weight: 700;
 		letter-spacing: 0.06em;
 		padding: var(--space-1) var(--space-3);
@@ -235,6 +237,9 @@
 
 		&--no-figure {
 			--t-cat-display: var(--t-cat-no-image-display, none);
+		}
+		@include md-up {
+			--t-cat-font-size: var(--font-1);
 		}
 	}
 
@@ -329,4 +334,32 @@
 		}
 
 	}
+}
+
+.cat-climate {
+	--t-cat-bg-color: var(--c-climate);
+}
+
+.cat-health {
+	--t-cat-bg-color: var(--c-health);
+}
+
+.cat-physics {
+	--t-cat-bg-color: var(--c-physics);
+}
+
+.cat-human {
+	--t-cat-bg-color: var(--c-human);
+}
+
+.cat-techonolgy {
+	--t-cat-bg-color: var(--c-techonolgy);
+}
+
+.cat-nature {
+	--t-cat-bg-color: var(--c-nature);
+}
+
+.cat-space {
+	--t-cat-bg-color: var(--c-space);
 }

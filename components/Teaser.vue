@@ -1,5 +1,10 @@
 <template>
-  <a href="#" class="t" :class="className" :title="teaser.title">
+  <a
+    href="#"
+    class="t"
+    :class="[className, getCatName()]"
+    :title="teaser.title"
+  >
     <figure class="t__figure">
       <div class="t__category" v-if="teaser.label.title">
         {{ teaser.label.title }}
@@ -18,8 +23,7 @@
       <h2 class="t__title">{{ teaser.post_title }}</h2>
     </div>
     <div class="teaserControls" v-if="settings.showDropdown">
-      
-      <select name="className" v-model="className" >
+      <select name="className" v-model="className">
         <option value="t-default" selected>Image right</option>
         <option value="t-hide-image">Hide image</option>
         <option value="t-vertical">Vertical</option>
@@ -36,6 +40,19 @@ const props = defineProps({
     required: true,
   },
 });
+
+const catNames = [
+  "cat-climate",
+  "cat-health",
+  "cat-physics",
+  "cat-human",
+  "cat-techonolgy",
+  "cat-nature",
+  "cat-space",
+];
+const getCatName = () => {
+  return catNames[Math.floor(Math.random() * catNames.length)]
+};
 
 const imgixHost = "images.bonnier.cloud";
 
