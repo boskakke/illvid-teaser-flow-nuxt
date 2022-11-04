@@ -1,6 +1,9 @@
 <template>
   <a href="#" class="t" :class="className" :title="teaser.title">
     <figure class="t__figure">
+      <div class="t__category" v-if="teaser.label.title">
+        {{ teaser.label.title }}
+      </div>
       <nuxt-img
         :src="`${getImgxUrl(teaser.image.url)}?ar=3:2&fit=crop&w=800`"
         :placeholder="[100, 50, 10]"
@@ -9,10 +12,14 @@
       />
     </figure>
     <div class="t__body">
+      <div class="t__category t__category--no-figure" v-if="teaser.label.title">
+        {{ teaser.label.title }}
+      </div>
       <h2 class="t__title">{{ teaser.post_title }}</h2>
     </div>
     <div class="teaserControls" v-if="settings.showDropdown">
-      <select name="className" v-model="className">
+      
+      <select name="className" v-model="className" >
         <option value="t-default" selected>Image right</option>
         <option value="t-hide-image">Hide image</option>
         <option value="t-vertical">Vertical</option>

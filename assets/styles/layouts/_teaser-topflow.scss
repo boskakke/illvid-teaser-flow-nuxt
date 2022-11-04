@@ -9,7 +9,7 @@
 	--main-flow-grid-gap: 0;
 
 	@include md-up {
-		--t-main-font-size: 48px;
+		--t-main-font-size: var(--font-14);
 		--main-flow-grid-gap: var(--space-6);
 	}
 
@@ -53,15 +53,17 @@
 
 
 		@include sm-down {
-			--t-border-top: var(--border);
-			--t-margin-top: var(--space-4);
+			--t-border-top: var(--t-border);
+			--t-margin: var(--space-4) 0 0 0;
 			--t-padding-top: var(--space-4);
-
+			--t-t-margin-top: calc(var(--space-4) + var(--t-border-thickness) / 2);
+			margin-bottom: var(--space-4);
 			.t-default {
 				--t-body-display: flex;
 				--t-body-align-items: center;
 			}
 		}
+		
 
 		@include md-up {
 			--t-t-margin-top: var(--space-8);
@@ -133,6 +135,7 @@
 }
 
 
+
 // TEASER BOILTERPLATE 
 .t {
 	border-top: var(--t-border-top, none);
@@ -156,6 +159,7 @@
 	&+.t {
 		margin-top: var(--t-t-margin-top);
 		border-top: var(--t-border-top);
+
 	}
 
 
@@ -169,11 +173,14 @@
 	}
 
 	&__figure {
-		flex: var(--t-figure-flex, unset);
+		flex: var(--t-figure-flex, inline-flex);
 		overflow: hidden;
 		border-radius: var(--border-radius);
 		display: var(--t-figure-display, block);
+		position: relative;
 	}
+
+
 
 	&__image {
 		width: 100%;
@@ -181,6 +188,28 @@
 		height: auto;
 		transition: var(--t-image-transition, unset);
 		transform: var(--t-image-transform, unset);
+	}
+
+	&__category {
+		display: var(--t-cat-display, inline-flex);
+		font-size: var(--t-category-font-size, var(--font-1));
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		padding: var(--space-1) var(--space-3);
+		border-radius: var(--t-cat-border-radius, 4px 0 4px 0);
+		background-color: var(--t-cat-bg-color, var(--c-nature));
+		font-family: var(--font-alt);
+		color: #fff;
+		text-transform: uppercase;
+		position: var(--t-cat-position, absolute);
+		margin: var(--t-cat-margin);
+		top: 0;
+		left: 0;
+		z-index: 1;
+
+		&--no-figure {
+			--t-cat-display: var(--t-cat-no-image-display, none);
+		}
 	}
 
 	&__body {
@@ -203,7 +232,7 @@
 	// Teaser image right on mobile
 	.t-default:not(.t-main) {
 		flex-direction: row;
-		--t-font-size: 18px;
+		--t-font-size: var(--font-8);
 
 		.t__body {
 			flex-grow: 1;
@@ -217,9 +246,14 @@
 
 	// Teaser image right on mobile
 	.t-hide-image:not(.t-main) {
-		--t-font-size: 20px;
+		--t-font-size: var(--font-8);
 		--t-flex-direction: row;
+		--t-cat-position: relative;
+		--t-cat-margin: 0 0 var(--space-4);
 
+		@include sm-down {
+			--t-cat-no-image-display: inline-flex;
+		}
 
 		.t__figure {
 			--t-figure-display: none
@@ -228,7 +262,7 @@
 
 	// Teaser vertical on mobile
 	.t-vertical:not(.t-main) {
-		--t-font-size: var(--font-7);
+		--t-font-size: var(--font-8);
 		--t-flex-direction: column;
 		flex: 0 0 50%;
 		float: left;

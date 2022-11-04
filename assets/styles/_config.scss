@@ -40,9 +40,31 @@
 	--line-height-header: 1.3;
 	--line-height-base: 1.5;
 	--border-radius: 4px;
-	--border-color: #F5F5F5;
-	--border: 2px solid var(--border-color);
+	
+	
+	
+	
 	@include md-up {
 		--border-radius: 8px;
 	}
+
+	// BORDERS
+	--border-color: #F5F5F5;
+	--border: 2px solid var(--border-color);
+
+	// teaser borders:
+	--t-border-thickness: 2px;
+	--t-border: var(--t-border-thickness) solid var(--border-color);
+
+		// CATEGORY COLORS
+		--c-gray: hsla(0, 0%, 60%, 1);
+
+		--c-climate: hsla(174, 16%, 76%, 1);
+		--c-health: hsla(6, 61%, 46%, 1);
+		--c-physics: hsla(192, 56%, 51%, 1);
+		--c-human: hsla(21, 65%, 50%, 1);
+		--t-techonolgy: hsla(197, 100%, 31%, 1);
+		--c-nature: hsla(47, 85%, 55%, 1);
+		--c-space: hsla(240, 6%, 23%, 1);
+
 }
