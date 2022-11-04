@@ -17,27 +17,30 @@
             </label>
           </div>
         </div>
-        
-         <button
+
+        <button
           @click="settings.inverted = !settings.inverted"
-          class="hesteknap hidden-sm-down"
+          :class="{'active' : settings.inverted}"
+          class="hesteknap hidden-sm-down "
         >
           <IconsInvert class="hest" />
         </button>
         <button
           @click="settings.showDropdown = !settings.showDropdown"
+          :class="{'active' : settings.showDropdown}"
           class="hesteknap hidden-md-up"
         >
           <IconsSettings class="hest" />
         </button>
         <button
           @click="settings.showPalette = !settings.showPalette"
+          :class="{'active' : settings.showPalette}"
           class="hesteknap"
         >
           <IconsPalette class="hest" />
         </button>
       </div>
-      <div :class="{'demo': settings.showPalette}">
+      <div :class="{ demo: settings.showPalette }">
         <TeaserflowTeaserFlow3 v-if="counter == 3" />
         <TeaserflowTeaserFlow4 v-if="counter == 4" />
         <TeaserflowTeaserFlow5 v-if="counter == 5" />
@@ -55,7 +58,7 @@ const teasers = await useNuxtApp().$articleFetch(
   `/wp-json/wp/v2/pages/${config.FRONTPAGE_ID}?with=contents,teasers,ancestor,contents.content.teasers.vocabularies`
 );
 
-const counter = ref(3);
+const counter = ref(6);
 
 const settings = reactive({
   showDropdown: false,
@@ -70,7 +73,7 @@ provide("teasers", teaserList);
 provide("settings", settings);
 </script>
 
-<style >
+<style lang="scss">
 h2 {
   margin: 0;
   line-height: 1;
@@ -82,10 +85,14 @@ h2 {
   border: 0;
 }
 .hesteknap {
-  padding: 0;
+  padding: 4px;
   background: transparent;
   border: 0;
   color: #eee;
   font-size: 20px;
+  border-radius: 50%;
+  &.active {
+    background: rgb(255, 255, 255, 20%);
+  }
 }
 </style>
