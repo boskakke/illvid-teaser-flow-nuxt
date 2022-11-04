@@ -2,7 +2,7 @@
   <div class="frontpage">
     <div class="container">
 
-      <nuxt-link to="/teaserflow">Flexible Teaser List</nuxt-link>
+      <nuxt-link to="/flexible-teaser-list">Flexible Teaser List</nuxt-link>
     </div>
   </div>
 </template>

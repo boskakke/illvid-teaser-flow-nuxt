@@ -69,7 +69,6 @@ const settings = reactive({
 const teaserList = ref(teasers.data.contents.data[0].content.data.teasers.data);
 
 provide("teasers", teaserList);
-
 provide("settings", settings);
 </script>
 
