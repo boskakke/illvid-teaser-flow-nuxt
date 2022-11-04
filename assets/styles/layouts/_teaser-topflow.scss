@@ -67,8 +67,6 @@
 	&__main {
 		order: var(--main-order);
 		background: var(--main-demo-color);
-
-
 	}
 
 	// SIDEBAR
@@ -90,10 +88,7 @@
 			--t-t-margin-top: calc(var(--space-4) + var(--t-border-thickness) / 2);
 			margin-bottom: var(--space-4);
 
-			.t-default {
-				--t-body-display: flex;
-				--t-body-align-items: center;
-			}
+			
 		}
 
 
@@ -112,8 +107,7 @@
 				--t-figure-flex: 0 0 var(--t-figure-size, 180px);
 				--t-gap: var(--space-5);
 				--t-font-size: var(--font-8);
-				--t-body-display: flex;
-				--t-body-align-items: center;
+				
 				--t-t-margin-top: var(--space-8);
 			}
 		}
@@ -133,11 +127,6 @@
 			--t-border-top: var(--border);
 			--t-margin-top: var(--space-4);
 			--t-padding-top: var(--space-4);
-
-			.t-default {
-				--t-body-display: flex;
-				--t-body-align-items: center;
-			}
 		}
 
 		@include md-up {
@@ -211,7 +200,6 @@
 		border-radius: var(--border-radius);
 		display: var(--t-figure-display, block);
 		position: relative;
-		
 	}
 
 	&__image {
@@ -235,7 +223,6 @@
 		color: #fff;
 		text-transform: uppercase;
 		position: var(--t-cat-position, absolute);
-		margin: var(--t-cat-margin);
 		top: 0;
 		left: 0;
 		z-index: 1;
@@ -243,6 +230,10 @@
 		&--no-figure {
 			--t-cat-display: var(--t-cat-no-image-display, none);
 		}
+		&--width-figure {
+			--t-cat-display: var(--t-cat-width-image-display, none);
+		}
+
 		@include md-up {
 			--t-cat-font-size: var(--font-2);
 		}
@@ -251,7 +242,9 @@
 	&__body {
 		padding: var(--t-body-padding, 0);
 		overflow: hidden;
+		gap: var(--t-body-gap, 0);
 		flex: var(--t-body-flex, unset);
+		flex-direction: var(--t-body-flex-direction, unset);
 		display: var(--t-body-display, initial);
 		align-items: var(--t-body-align-items, unset);
 
@@ -267,10 +260,22 @@
 @include sm-down {
 
 	// Teaser image right on mobile
+	.t-default {
+		
+		--t-body-display: flex;
+		--t-body-flex-direction: column;
+		--t-cat-position: relative;
+		--t-body-align-items: flex-start;
+		--t-body-gap: var(--space-3);
+		--t-cat-border-radius: 4px;
+		--t-cat-no-image-display: inline-flex;
+		
+	}
 	.t-default:not(.t-main) {
-		flex-direction: row;
 		--t-font-size: var(--font-8);
-
+		--t-cat-display: none;
+		flex-direction: row;
+		
 		.t__body {
 			flex-grow: 1;
 		}
@@ -286,7 +291,6 @@
 		--t-font-size: var(--font-8);
 		--t-flex-direction: row;
 		--t-cat-position: relative;
-		--t-cat-margin: 0 0 var(--space-3);
 		--t-padding-top: calc(var(--space-4) - 8px);
 
 		@include sm-down {
@@ -296,6 +300,7 @@
 		.t__figure {
 			--t-figure-display: none
 		}
+
 	}
 
 	// Teaser vertical on mobile
@@ -318,6 +323,11 @@
 	// makse shure last teaser after .t-vertical clears float from t.vertical.
 	.t-vertical+.t:not(.t-vertical) {
 		clear: left;
+	}
+	.t-main {
+		--t-cat-no-image-display: none;
+		--t-cat-position: absolute;
+		--t-cat-border-radius: 4px 0 4px 0;
 	}
 }
 
