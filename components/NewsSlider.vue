@@ -20,11 +20,10 @@
             slidesPerView: 1.5,
           },
           420: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.2,
           },
           768: {
-            slidesPerView: 4,
-            spaceBetween: 20,
+            slidesPerView: 4.2,
           },
           1024: {
             slidesPerView: 5,
