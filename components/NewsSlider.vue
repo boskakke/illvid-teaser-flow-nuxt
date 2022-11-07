@@ -33,7 +33,7 @@
         }"
       >
         <swiper-slide v-for="(teaser, index) in 10">
-          <TeaserSlider :teaser="teaserList[index]" />
+          <TeaserSlider :teaser="teaserList[index]" class="t-slider" />
         </swiper-slide>
       </swiper>
     </div>

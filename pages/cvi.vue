@@ -4,12 +4,11 @@
     <div class="main-grid--12col">
       
       <div class="flex">
-        <button class="btn-icon">
-          <IconsBookmark />
+        <button class="btn-icon" @click="active = !active">
+          <IconsBookmarkActive v-if="active" />
+          <IconsBookmark v-else/>
         </button>
-        <button class="btn-icon">
-          <IconsBookmarkActive />
-        </button>
+        
         <button class="btn-icon">
           <IconsLink />
         </button>
@@ -28,6 +27,9 @@
         <button class="btn-icon">
           <IconsChevronDown />
         </button>
+        <button class="btn-icon">
+          <IconsHeadphones />
+        </button>
 
         
       </div>
@@ -35,6 +37,9 @@
   </div>
 </template>
 
+<script setup>
+const active = ref()
+</script>
 <style lang="scss">
 .vars {
   position: fixed;

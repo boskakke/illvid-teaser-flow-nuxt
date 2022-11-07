@@ -6,7 +6,7 @@
         <li>
           <nuxt-link to="/flexible-teaser-list">Flexible Teaser List</nuxt-link>
         </li>
-        <li><nuxt-link to="/slider">Slider</nuxt-link></li>
+        <li><nuxt-link to="/sliders">Sliders</nuxt-link></li>
       </ul>
     </div>
   </div>

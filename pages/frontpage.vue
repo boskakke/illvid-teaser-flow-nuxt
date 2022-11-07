@@ -1,6 +1,7 @@
 <template>
   <div v-if="teasers">
-    <div class="main-grid mb-8">
+    
+    <div class="main-grid mb-8 deck--p4">
       <div class="main-grid--12col">
         <div class="controls">
           <div class="radio">
@@ -50,12 +51,25 @@
       </div>
     </div>
 
-    <div class="main-grid deck--primary overflow-hidden">
+    <div class="main-grid deck--primary deck--p4 overflow-hidden">
       <div class="main-grid--12col">
-        <div class="deck__title">Seneste nyt</div>
+        <div class="deck-title">
+          <div class="deck-title__label">Seneste nyt</div>
+          <div class="breaking-anim">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
       <div class="main-grid--12col">
         <NewsSlider />
+      </div>
+    </div>
+
+    <div class="main-grid mb-4 deck--secondary pt-8">
+      <div class="main-grid--12col">
+        <TeaserTheme :teaser="teaserList[2]" class="t-theme" />
       </div>
     </div>
   </div>

@@ -84,7 +84,7 @@
 		@include sm-down {
 			--t-border-top: var(--t-border);
 			--t-margin: var(--space-4) 0 0 0;
-			--t-padding-top: var(--space-4);
+			--t-padding: var(--space-4) 0 0 0;
 			--t-t-margin-top: calc(var(--space-4) + var(--t-border-thickness) / 2);
 			margin-bottom: var(--space-4);
 		}
@@ -121,7 +121,7 @@
 		@include sm-down {
 			--t-border-top: var(--border);
 			--t-margin-top: var(--space-4);
-			--t-padding-top: var(--space-4);
+			--t-padding: var(--space-4) 0 0 0;
 		}
 
 		@include md-up {
@@ -172,8 +172,8 @@
 		--t-cat-position: relative;
 		--t-body-align-items: flex-start;
 		--t-body-gap: var(--space-3);
-		--t-cat-border-radius: 4px;
 		--t-cat-no-image-display: inline-flex;
+		
 
 	}
 
@@ -197,7 +197,7 @@
 		--t-font-size: var(--font-8);
 		--t-flex-direction: row;
 		--t-cat-position: relative;
-		--t-padding-top: calc(var(--space-4) - 8px);
+		--t-padding: calc(var(--space-4) - 8px) 0 0 0;
 
 		@include sm-down {
 			--t-cat-no-image-display: inline-flex;
@@ -235,6 +235,7 @@
 		--t-cat-no-image-display: none;
 		--t-cat-position: absolute;
 		--t-cat-border-radius: 4px 0 4px 0;
+
 	}
 }
 
