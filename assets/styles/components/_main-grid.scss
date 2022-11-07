@@ -1,6 +1,5 @@
 :root {
 	--column-max-width: 78px;
-	--deck-padding: var(--space-8) 0;
 
 	@include lg-up {
 		--main-grid-gap: 0 1.2rem;

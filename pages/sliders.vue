@@ -1,5 +1,5 @@
 <template>
-  <div class="main-grid deck--primary overflow-hidden">
+  <div class="main-grid deck--primary deck--p4 overflow-hidden">
     <div class="main-grid--12col">
       <div class="deck-title">
         <div class="deck-title__label">Seneste nyt</div>
@@ -14,7 +14,7 @@
 		<NewsSlider />
     </div>
   </div>
-  <div class="main-grid deck--secondary overflow-hidden">
+  <div class="main-grid deck--secondary overflow-hidden deck--p4">
     <div class="main-grid--12col">
       <div class="deck-title">
         <div class="deck-title__label">Populært lige nu</div>

@@ -67,11 +67,22 @@
       </div>
     </div>
 
-    <div class="main-grid mb-4 deck--secondary pt-8">
+    <div class="main-grid  deck--secondary pt-8">
       <div class="main-grid--12col">
         <TeaserTheme :teaser="teaserList[2]" class="t-theme" />
       </div>
     </div>
+
+    <div class="main-grid deck--secondary overflow-hidden deck--p4">
+    <div class="main-grid--12col">
+      <div class="deck-title">
+        <div class="deck-title__label">Populært lige nu</div>
+      </div>
+    </div>
+    <div class="main-grid--12col">
+		<Toplist />
+    </div>
+  </div>
   </div>
 </template>
 
