@@ -1,8 +1,12 @@
 <template>
   <div class="frontpage">
     <div class="container">
-
-      <nuxt-link to="/flexible-teaser-list">Flexible Teaser List</nuxt-link>
+      <ul>
+        <li>
+          <nuxt-link to="/flexible-teaser-list">Flexible Teaser List</nuxt-link>
+        </li>
+        <li><nuxt-link to="/slider">Slider</nuxt-link></li>
+      </ul>
     </div>
   </div>
 </template>

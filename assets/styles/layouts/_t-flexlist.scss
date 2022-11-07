@@ -10,6 +10,9 @@
 	--t-main-title-line-height: 1;
 	--t-border-thickness: 2px;
 	--t-border: var(--t-border-thickness) solid var(--border-color);
+	
+	--t-cat-font-size: var(--font-0);
+	--t-cat-font-size-md-up: var(--font-2);
 
 	@include md-up {
 		--t-main-font-size: var(--font-14);
@@ -33,6 +36,7 @@
 }
 
 .flex-list__bottom--3 {
+	
 	@include md-only {
 		--t-figure-size: 120px;
 	}
@@ -148,6 +152,7 @@
 		}
 	}
 }
+
 
 
 

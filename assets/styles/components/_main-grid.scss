@@ -1,0 +1,33 @@
+:root {
+	--column-max-width: 78px;
+	--deck-padding: var(--space-8) 0;
+	@include lg-up {
+		--main-grid-gap: 0 1.2rem;
+	}
+}
+
+.main-grid {
+	display: grid;
+	grid-template: auto/[full-start] minmax(.75rem, 1fr) [main-start] repeat(12, [col-start] minmax(10px, var(--column-max-width))) [main-end] minmax(.75rem, 1fr) [full-end];
+	gap: var(--main-grid-gap);
+
+	&--12col {
+		grid-column: main-start / span 12;
+	}
+}
+
+
+.deck {
+	&__title {
+		font-family: var(--font-header);
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: var(--font-11);
+		margin: 0 0 var(--space-7);
+		line-height: 1;
+	}
+	&--primary {
+			background-color: var(--c-primary);
+			padding: var(--deck-padding);
+		}
+}

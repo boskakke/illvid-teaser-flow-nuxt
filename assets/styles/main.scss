@@ -2,7 +2,7 @@
 @import "./components/vars";
 @import "./components/fonts";
 @import "./components/breakpoints";
-@import "./components/grid";
+
 @import "./components/reset";
 @import "./components/buttons";
 @import "./components/tools";
@@ -13,6 +13,10 @@
 // Illvid Teaserflow CSS
 @import "./layouts/t-flexlist";
 @import "./layouts/t";
+@import "./components/main-grid";
+@import "./layouts/teaser-slider";
+
+
 
 // Demo stuff.... Not to be used on prod:
 @import "./layouts/demostuff";

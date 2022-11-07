@@ -27,7 +27,6 @@
 	&__date {
 		font-size: var(--font-5);
 		margin: 0 0 var(--space-2);
-		letter-spacing: 0.19em;
 	}
 
 	&__title {
@@ -53,7 +52,6 @@
 		height: auto;
 		transition: var(--t-image-transition, unset);
 		transform: var(--t-image-transform, unset);
-		aspect-ratio: var(--t-image-aspect-ratio, 3 / 2);
 	}
 
 	&__category {
@@ -100,5 +98,4 @@
 .t-slider {
 	--t-flex-direction: column;
 	--t-font-size: var(--font-8);
-	--t-margin: 0;
 }

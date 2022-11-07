@@ -32,7 +32,7 @@
         >
           <IconsSettings class="hest" />
         </button>
-        <button
+        <button 
           @click="settings.showPalette = !settings.showPalette"
           :class="{'active' : settings.showPalette}"
           class="hesteknap"

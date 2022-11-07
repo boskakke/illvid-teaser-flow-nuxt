@@ -1,0 +1,40 @@
+.teaser-slider {
+	position: relative;
+
+	&__nav {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		width: 100%;
+		display: none;
+		@include xl-up {
+			display: block;
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		
+		&--prev {
+			left: calc(var(--space-9) * -1);
+		}
+
+		&--next {
+			right: calc(var(--space-9) * -1);
+		}
+	}
+}
+.swiper-button-disabled {
+	opacity: 0;
+}
+.swiper {
+	@include md-down {
+		overflow: visible !important;
+	}
+}
+.swiper-slide {
+	@include md-down {
+		// max-width: 160px;
+	}
+}
