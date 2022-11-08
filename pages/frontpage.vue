@@ -1,5 +1,8 @@
 <template>
-  <div v-if="teasers">
+  <div v-if="!teasers" class="preloader">
+    <IconsSpinner />
+  </div>
+  <div v-else="teasers">
     
     <div class="main-grid mb-8 deck--p4">
       <div class="main-grid--12col">
@@ -129,5 +132,13 @@ h2 {
   &.active {
     background: rgb(255, 255, 255, 20%);
   }
+}
+
+.preloader {
+  height: 100svh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
