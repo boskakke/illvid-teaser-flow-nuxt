@@ -20,7 +20,7 @@
       <div class="t__category t__category--no-figure" v-if="teaser.label.title">
         {{ teaser.label.title }}
       </div>
-      <h2 class="t__title">{{ teaser.post_title }}</h2>
+      <h2 class="t__title">{{ teaser.title }}</h2>
     </div>
     <div class="teaserControls" v-if="settings.showDropdown">
       <select name="className" v-model="className">
