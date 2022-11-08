@@ -1,5 +1,5 @@
 <template>
-  <div class="main-grid deck--primary pt-6 pb-4 mb-4 overflow-hidden">
+  <div class="main-grid deck--primary pt-6 pb-8 mb-4 overflow-hidden">
     <div class="main-grid--12col">
       <div class="deck-title">
         <div class="deck-title__label">Seneste nyt</div>

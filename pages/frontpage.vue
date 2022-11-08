@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <div class="main-grid deck--primary pt-6 pb-6 overflow-hidden">
+    <div class="main-grid deck--primary pt-6 pb-8 overflow-hidden">
       <div class="main-grid--12col">
         <div class="deck-title">
           <div class="deck-title__label">Seneste nyt</div>
