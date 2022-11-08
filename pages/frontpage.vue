@@ -1,7 +1,7 @@
 <template>
   <div v-if="teasers">
     
-    <div class="main-grid mb-8 deck--p4">
+    <div class="main-grid mb-8 pt-4 pb-4">
       <div class="main-grid--12col">
         <div class="controls">
           <div class="radio">
@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <div class="main-grid deck--primary deck--p4 overflow-hidden">
+    <div class="main-grid deck--primary pt-6 pb-6 overflow-hidden">
       <div class="main-grid--12col">
         <div class="deck-title">
           <div class="deck-title__label">Seneste nyt</div>
@@ -67,13 +67,13 @@
       </div>
     </div>
 
-    <div class="main-grid  deck--secondary pt-8">
+    <div class="main-grid  deck--secondary pt-8 mt-4 mb-4">
       <div class="main-grid--12col">
         <TeaserTheme :teaser="teaserList[2]" class="t-theme" />
       </div>
     </div>
 
-    <div class="main-grid deck--secondary overflow-hidden deck--p4">
+    <div class="main-grid deck--secondary overflow-hidden pt-6">
     <div class="main-grid--12col">
       <div class="deck-title">
         <div class="deck-title__label">Populært lige nu</div>

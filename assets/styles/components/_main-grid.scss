@@ -16,34 +16,3 @@
 	}
 }
 
-
-.deck-title {
-	display: flex;
-	align-items: center;
-	margin: 0 0 var(--space-7);
-	gap: var(--space-3);
-
-	&__label {
-		font-family: var(--font-header);
-		font-weight: 300;
-		text-transform: uppercase;
-		font-size: var(--font-11);
-		line-height: 1;
-	}
-
-}
-
-.deck {
-	&--primary {
-		background-color: var(--c-primary);
-	}
-	&--secondary {
-		background-color: var(--c-gray);
-	}
-	&--p2 {
-		padding: var(--space-4) 0;
-	}
-	&--p4 {
-		padding: var(--space-6) 0;
-	}
-}

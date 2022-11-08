@@ -1,5 +1,6 @@
 <template>
   <div class="main"> 
+     <NuxtLoadingIndicator />
     <div class="topmenu">
       <nuxt-link to="/"><img src="/logo.svg" alt="IllVId" class="logo"/></nuxt-link>
     </div>
@@ -23,5 +24,6 @@
   width: 200px;
   height: auto;
 }
+
 </style>
 
