@@ -1,9 +1,5 @@
 <template>
   <a href="#" class="t" :class="[getCatName()]" :title="teaser?.title">
-    <div class="t__theme">
-      <span class="t__theme-label">Tema - Grøn revolution</span>
-      <div class="t__theme-icon"><IconsLeaf /></div>
-    </div>
     <figure class="t__figure">
       <div class="t__category" v-if="teaser?.label.title">
         {{ teaser.label.title }}

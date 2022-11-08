@@ -104,7 +104,8 @@
 				--t-figure-flex: 0 0 var(--t-figure-size, 180px);
 				--t-gap: var(--space-5);
 				--t-font-size: var(--font-8);
-
+				--t-body-display: flex;
+				--t-body-align-items: center;
 				--t-t-margin-top: var(--space-8);
 			}
 		}

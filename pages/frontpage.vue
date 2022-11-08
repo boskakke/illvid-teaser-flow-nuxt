@@ -1,6 +1,7 @@
 <template>
   <div v-if="teasers">
     
+
     <div class="main-grid mb-8 pt-4 pb-4">
       <div class="main-grid--12col">
         <div class="controls">
@@ -67,22 +68,30 @@
       </div>
     </div>
 
-    <div class="main-grid  deck--secondary pt-8 mt-4 mb-4">
+    <div class="main-grid deck--secondary overflow-hidden pt-6">
+      <div class="main-grid--12col">
+        <div class="deck-title">
+          <div class="deck-title__label">Populært lige nu</div>
+        </div>
+      </div>
+      <div class="main-grid--12col">
+        <Toplist />
+      </div>
+    </div>
+
+    <div class="main-grid deck--secondary pt-4 mt-4 mb-4">
+      <div class="main-grid--12col">
+        <a class="t-list-theme" href="#">
+          <span class="t-list-theme__label">Tema - Grøn revolution</span>
+          <div class="t-list-theme__icon"><IconsLeaf /></div>
+        </a>
+      </div>
       <div class="main-grid--12col">
         <TeaserTheme :teaser="teaserList[2]" class="t-theme" />
       </div>
     </div>
 
-    <div class="main-grid deck--secondary overflow-hidden pt-6">
-    <div class="main-grid--12col">
-      <div class="deck-title">
-        <div class="deck-title__label">Populært lige nu</div>
-      </div>
-    </div>
-    <div class="main-grid--12col">
-		<Toplist />
-    </div>
-  </div>
+
   </div>
 </template>
 
@@ -109,25 +118,10 @@ provide("settings", settings);
 </script>
 
 <style lang="scss">
-h2 {
-  margin: 0;
-  line-height: 1;
-}
+// h2 {
+//   margin: 0;
+//   line-height: 1;
+// }
+// 
 
-.hest {
-  background: transparent;
-  padding: 0;
-  border: 0;
-}
-.hesteknap {
-  padding: 4px;
-  background: transparent;
-  border: 0;
-  color: #eee;
-  font-size: 20px;
-  border-radius: 50%;
-  &.active {
-    background: rgb(255, 255, 255, 20%);
-  }
-}
 </style>

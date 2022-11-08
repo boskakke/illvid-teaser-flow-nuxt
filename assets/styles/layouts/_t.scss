@@ -27,19 +27,7 @@
 
 	}
 
-	&__theme {
-		flex: var(--t-theme-flex);
-		font-family: var(--font-alt);
-		text-transform: uppercase;
-		font-weight: 500;
-		font-size: var(--font-8);
-		display: flex;
-		gap: var(--space-2);
-		align-items: center;
-		@include md-up {
-			font-size: var(--font-10);
-		}
-	}
+	
 
 	&__cta {
 		display: flex;
@@ -205,7 +193,7 @@
 		--t-gap: var(--space-4) 24px;
 		--t-padding: 0;
 		--t-bg: transparent;
-		--t-theme-flex: 0 0 100%;
+		
 		--t-description-display: block;
 		--t-flex-direction: row-reverse;
 		--t-figure-flex: 0 0 calc(50% - 24px / 2);

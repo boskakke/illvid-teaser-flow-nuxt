@@ -121,12 +121,12 @@ textarea {
 
 a {
   cursor: pointer;
-  // color: var(--link-color);
-  // text-decoration: var(--link-text-decoration, underline);
+  color: var(--link-color);
+  text-decoration: var(--link-text-decoration, underline);
   
   &:hover {
-    // color: var(--link-color-hover);
-    // text-decoration: var(--link-text-decoration-hover, initial);
+    color: var(--link-color-hover);
+    text-decoration: var(--link-text-decoration-hover, none);
     background-color: var(--link-background-hover);
   }
 }
