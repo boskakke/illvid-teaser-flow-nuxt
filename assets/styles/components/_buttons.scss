@@ -100,7 +100,7 @@
 }
 
 :root {
-	--btn-padding: var(--space-3) var(--space-4);
+	--btn-padding: calc(var(--space-3) - 1px) var(--space-5);
 	--btn-border-radius: 4px;
 	--btn-font-size: 20px;
 	--btn-font-family: var(--font-alt);
@@ -115,19 +115,31 @@
 .btn--primary {
 	--btn-background: var(--c-primary);
 	--btn-background-hover: var(--c-primary);
-	--btn-border: 1px solid var(--c-primary);
+	--btn-border: 2px solid var(--c-primary);
 }
 .btn--secondary {
 	--btn-background: transparent;
 	--btn-background-hover: transparent;
-	--btn-border: 1px solid var(--c-primary);
+	--btn-border: 2px solid var(--c-primary);
 	--btn-color: var(--body-color);
+	--btn-background-active: var(--c-primary);
 }
 .btn--marketing {
 	--btn-background: var(--c-green);
 	--btn-background-hover: var(--c-green);
-	--btn-border: 1px solid var(--c-green);
+	--btn-background-active: var(--c-green);
+	--btn-border: 2px solid var(--c-green);
 	--btn-color: #fff;
 	--btn-color-hover: #fff;
-	--btn-padding: var(--space-1) var(--space-4);
+	--btn-padding: 8px var(--space-4);
+	--btn-font-size: var(--font-2);
+}
+.btn--text {
+	--btn-padding: 0;
+	--btn-font-size: var(--font-2);
+	--btn-gap: var(--space-3);
+	svg {
+		width: 1.4rem;
+		height: auto;
+	}
 }
