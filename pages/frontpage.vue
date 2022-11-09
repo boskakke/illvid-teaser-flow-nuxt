@@ -2,7 +2,7 @@
   <div v-if="teasers">
     
 
-    <div class="main-grid mb-8 pt-4 pb-4">
+    <div class="main-grid mb-8 sm-mb-4 pt-4">
       <div class="main-grid--12col">
         <div class="controls">
           <div class="radio">
