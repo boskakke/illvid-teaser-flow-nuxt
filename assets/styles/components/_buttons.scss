@@ -133,11 +133,45 @@
 	--btn-color-hover: #fff;
 	--btn-padding: 8px var(--space-4);
 	--btn-font-size: var(--font-2);
+	@include md-up {
+		--btn-font-size: var(--font-7);
+		--btn-padding: 9px var(--space-4);
+	}
 }
 .btn--text {
 	--btn-padding: 0;
 	--btn-font-size: var(--font-2);
 	--btn-gap: var(--space-3);
+	@include md-up {
+		--btn-font-size: var(--font-7);
+	}
+	svg {
+		width: 1.4rem;
+		height: auto;
+	}
+}
+.btn--text {
+	--btn-padding: 0;
+	--btn-font-size: var(--font-2);
+	--btn-gap: var(--space-3);
+	@include md-up {
+		--btn-font-size: var(--font-7);
+	}
+	svg {
+		width: 1.4rem;
+		height: auto;
+	}
+}
+.btn--text-alt {
+	--btn-padding: 0;
+	--btn-color: #fff;
+	--btn-color-hover: #fff;
+	--btn-color-active: #fff;
+	--btn-font-size: var(--font-2);
+	--btn-gap: var(--space-3);
+	@include md-up {
+		--btn-font-size: var(--font-7);
+	}
 	svg {
 		width: 1.4rem;
 		height: auto;
