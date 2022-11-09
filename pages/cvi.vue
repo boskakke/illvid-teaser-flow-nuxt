@@ -1,14 +1,13 @@
 <template>
   <div class="main-grid">
-    <div class="main-grid--12col">CVI</div>
     <div class="main-grid--12col">
-      
+      <h2>.btn-icon</h2>
       <div class="flex">
         <button class="btn-icon" @click="active = !active">
           <IconsBookmarkActive v-if="active" />
-          <IconsBookmark v-else/>
+          <IconsBookmark v-else />
         </button>
-        
+
         <button class="btn-icon">
           <IconsLink />
         </button>
@@ -30,15 +29,25 @@
         <button class="btn-icon">
           <IconsHeadphones />
         </button>
-
-        
+      </div>
+    </div>
+    <div class="main-grid--12col">
+      <h2>.btn</h2>
+      <div class="flex">
+        <button class="btn btn--primary">Læs hele artiklen</button>
+        <button class="btn btn--secondary">Læs hele artiklen</button>
+        <button class="btn btn--marketing">Abonnér</button>
+        <button class="btn btn--text">
+          <span>Læs hele artiklen</span>
+          <IconsArrowLong />
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-const active = ref()
+const active = ref();
 </script>
 <style lang="scss">
 .vars {
@@ -47,8 +56,8 @@ const active = ref()
   background: #fff;
 }
 .flex {
-	margin: var(--space-6) 0;
-	display: flex;
-	gap: 1rem;
+  margin: var(--space-6) 0;
+  display: flex;
+  gap: 1rem;
 }
 </style>
