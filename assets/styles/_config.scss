@@ -5,11 +5,6 @@
 :root {
 
 	@each $key,
-	$val in $font-sizes {
-		--font-#{$key}: #{calculaterem($val)};
-	}
-
-	@each $key,
 	$val in $spacers {
 		--space-#{$key}: #{calculatespace($val)};
 	}
@@ -56,7 +51,7 @@
 	--c-health: hsla(6, 61%, 46%, 1);
 	--c-physics: hsla(192, 56%, 51%, 1);
 	--c-human: hsla(21, 65%, 50%, 1);
-	--t-techonolgy: hsla(197, 100%, 31%, 1);
+	--c-techonolgy: hsla(197, 100%, 31%, 1);
 	--c-nature: hsla(47, 85%, 55%, 1);
 	--c-space: hsla(240, 6%, 23%, 1);
 

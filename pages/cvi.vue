@@ -8,7 +8,17 @@
         <div class="color color--gray">--c-gray</div>
         <div class="color color--body">--c-body</div>
       </div>
-      <h2>.btn-icon</h2>
+      <div class="flex">
+        <div class="color color--climate">--c-climate</div>
+        <div class="color color--health">--c-health</div>
+        <div class="color color--physics">--c-physics</div>
+        <div class="color color--human">--c-human</div>
+        <div class="color color--techonolgy">--c-techonolgy</div>
+        <div class="color color--nature">--c-nature</div>
+        <div class="color color--space">--c-space</div>
+      </div>
+      <h2>Buttons w/ icons</h2>
+      <code>.btn-icon</code>
       <div class="flex">
         <button class="btn-icon" @click="active = !active">
           <IconsBookmarkActive v-if="active" />
@@ -37,9 +47,21 @@
           <IconsHeadphones />
         </button>
       </div>
+      <code>.btn-icon--alt</code>
+      <div class="flex">
+        <button class="btn-icon btn-icon--alt">
+          <IconsClose />
+        </button>
+        <button class="btn-icon btn-icon--alt">
+          <IconsPlus />
+        </button>
+        <button class="btn-icon btn-icon--alt">
+          <IconsMenu />
+        </button>
+      </div>
     </div>
     <div class="main-grid--12col">
-      <h2>.btn</h2>
+      
       <code>.btn--primary</code>
       <button class="btn btn--primary">Læs hele artiklen</button>
       <code>.btn--secondary</code>
@@ -83,6 +105,34 @@ const active = ref(false)
   }
   &--body {
     background: var(--c-body);
+    color: #fff;
+  }
+  &--climate {
+    background: var(--c-climate);
+    color: #fff;
+  }
+  &--health {
+    background: var(--c-health);
+    color: #fff;
+  }
+  &--physics {
+    background: var(--c-physics);
+    color: #fff;
+  }
+  &--human {
+    background: var(--c-human);
+    color: #fff;
+  }
+  &--techonolgy {
+    background: var(--c-techonolgy);
+    color: #fff;
+  }
+  &--nature {
+    background: var(--c-nature);
+    color: #fff;
+  }
+  &--space {
+    background: var(--c-space);
     color: #fff;
   }
 }

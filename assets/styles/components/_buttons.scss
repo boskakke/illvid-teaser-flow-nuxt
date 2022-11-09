@@ -97,6 +97,10 @@
 		--btn-icon-bg: var(--c-body);
 		--btn-icon-color: var(--c-primary);
 	}
+	&--alt {
+		--btn-icon-bg: transparent;
+		--btn-icon-color: var(--body-color);
+	}
 }
 
 :root {
