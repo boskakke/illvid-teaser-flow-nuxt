@@ -6,10 +6,10 @@
 	
 
 	span {
-		width: .25rem;
-		height: .25rem;
+		width: .35rem;
+		height: .35rem;
 		border-radius: 50%;
-		background-color: var(--c-body);
+		background-color: var(--c-breaking-animation);
 		animation: breaking 1.2s infinite ease-in;
 		display: inline-block;
 		--jumpFrom: -2px;

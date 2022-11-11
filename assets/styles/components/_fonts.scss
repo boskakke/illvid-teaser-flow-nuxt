@@ -15,6 +15,7 @@
 @include installFont('Solido', '@/assets/fonts/Solido-Bold', 'normal', 600);
 @include installFont('Solido', '@/assets/fonts/Solido-ExtraBold', 'normal', 700);
 @include installFont('Solido', '@/assets/fonts/Solido-Black', 'normal', 800);
+@include installFont('Solido', '@/assets/fonts/Solido-Heavy', 'normal', 900);
 
 @include installFont('Solido Condensed',
 	'@/assets/fonts/SolidoCondensed-Book',

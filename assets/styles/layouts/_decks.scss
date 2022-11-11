@@ -1,29 +1,88 @@
-.deck-title {
-	display: flex;
-	align-items: center;
-	margin: 0 0 var(--space-7);
-	gap: var(--space-3);
+
+.page-title {
 
 	&__label {
 		font-family: var(--font-alt);
-		font-weight: 500;
 		text-transform: uppercase;
-		font-size: var(--font-8);
-		line-height: 1;
-
-		@include md-up {
-			font-size: var(--font-11);
-		}
+		font-weight: 900;
+		margin: 0;
 	}
-
 }
 
-.deck {
-	&--primary {
-		background-color: var(--c-primary);
+.widget-title {
+	font-family: var(--font-alt);
+	font-weight: 900;
+	font-size: var(--font-11);
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: var(--space-3);
+	font-size: var(--font-8);
+	line-height: 1;
+
+	@include md-up {
+		font-size: var(--font-11);
 	}
 
-	&--secondary {
-		background-color: var(--c-gray);
+	&--alt {
+		font-family: var(--font-alt);
+		font-weight: 500;
+		text-transform: uppercase;
 	}
+
+	&+.widget-description {
+		margin-top: var(--space-6);
+	}
+}
+
+.widget-description {
+	font-family: var(--font-alt);
+	font-weight: 500;
+	font-size: var(--font-8);
+	line-height: 1.2;
+	margin: 0;
+
+	p {
+		margin-top: 0;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.deck-collapsed {
+	--max-height: 125px;
+	--padding-bottom: 0;
+}
+.widget-seo {
+	position: relative;
+	padding-bottom: var(--padding-bottom, 2rem);
+	
+	.widget-description {
+		max-height: var(--max-height, 1000px);
+		overflow: hidden;
+		transition: max-height 2s ease;
+
+	}
+
+	&__expand {
+		position: absolute;
+		left: 0;
+		bottom: 2rem;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: 3rem;
+		background-image: linear-gradient(to top, rgba(white, 1), rgba(white, 0));
+		z-index: 1;
+		button {
+			margin-bottom: -1rem;
+		}
+	}
+}
+
+[widget="page-title"] + [widget="seo"] {
+	margin-top: -1rem;
 }

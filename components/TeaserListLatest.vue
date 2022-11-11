@@ -1,13 +1,6 @@
 <template>
-  <div v-if="teasers">
-    <div class="toplist">
-      <TeaserToplist
-        :teaser="teaserList[index]"
-        v-for="(teaser, index) in 6"
-        class="t-toplist"
-        :count="index + 1"
-      />
-    </div>
+  <div class="main-grid--12col">
+    <NewsSlider sliderId="1" :showDate="true" />
   </div>
 </template>
 
@@ -19,5 +12,3 @@ const teasers = await useNuxtApp().$articleFetch(
 const teaserList = ref(teasers.data.contents.data[0].content.data.teasers.data);
 </script>
 
-<style lang="scss">
-</style>

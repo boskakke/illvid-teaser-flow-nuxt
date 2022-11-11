@@ -3,6 +3,7 @@
     <div class="container">
       <ul>
         <li><nuxt-link to="/frontpage">Frontpage</nuxt-link></li>
+        <li><nuxt-link to="/category">Category</nuxt-link></li>
         <li>
           <nuxt-link to="/flexible-teaser-list">Flexible Teaser List</nuxt-link>
         </li>

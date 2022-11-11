@@ -1,7 +1,5 @@
 <template>
-  <div v-if="teasers">
-    
-
+  <div v-if="teasers" class="deck-grid">
     <div class="main-grid mb-8 sm-mb-4 pt-4">
       <div class="main-grid--12col">
         <div class="controls">
@@ -44,54 +42,30 @@
           </button>
         </div>
       </div>
-      <div :class="{ demo: settings.showPalette }" class="main-grid--12col">
-        <TeaserflowTeaserFlow3 v-if="counter == 3" />
-        <TeaserflowTeaserFlow4 v-if="counter == 4" />
-        <TeaserflowTeaserFlow5 v-if="counter == 5" />
-        <TeaserflowTeaserFlow6 v-if="counter == 6" />
-      </div>
     </div>
 
-    <div class="main-grid deck--primary pt-6 pb-8 overflow-hidden">
-      <div class="main-grid--12col">
-        <div class="deck-title">
-          <div class="deck-title__label">Seneste nyt</div>
-          <div class="breaking-anim">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
-      <div class="main-grid--12col">
-        <NewsSlider />
-      </div>
-    </div>
+    <TeaserflowTeaserFlow3
+      v-if="counter == 3"
+      :class="{ demo: settings.showPalette }"
+    />
+    <TeaserflowTeaserFlow4
+      v-if="counter == 4"
+      :class="{ demo: settings.showPalette }"
+    />
+    <TeaserflowTeaserFlow5
+      v-if="counter == 5"
+      :class="{ demo: settings.showPalette }"
+    />
+    <TeaserflowTeaserFlow6
+      v-if="counter == 6"
+      :class="{ demo: settings.showPalette }"
+    />
 
-    <div class="main-grid deck--secondary overflow-hidden pt-6">
-      <div class="main-grid--12col">
-        <div class="deck-title">
-          <div class="deck-title__label">Populært lige nu</div>
-        </div>
-      </div>
-      <div class="main-grid--12col">
-        <Toplist />
-      </div>
-    </div>
+    <TeaserList type="latest" title="Seneste nyt" hideDescription class="theme--primary theme" />
+    
+    <TeaserList type="toplist" title="Populært lige nu" hideDescription />
 
-    <div class="main-grid deck--secondary pt-4 mt-4 mb-4">
-      <div class="main-grid--12col">
-        <a class="t-list-theme" href="#">
-          <span class="t-list-theme__label">Tema - Grøn revolution</span>
-          <div class="t-list-theme__icon"><IconsLeaf /></div>
-        </a>
-      </div>
-      <div class="main-grid--12col">
-        <TeaserTheme :teaser="teaserList[2]" class="t-theme" />
-      </div>
-    </div>
-
-
+    <Theme :teaser="teaserList[3]" />
   </div>
 </template>
 
@@ -122,6 +96,5 @@ provide("settings", settings);
 //   margin: 0;
 //   line-height: 1;
 // }
-// 
-
+//
 </style>

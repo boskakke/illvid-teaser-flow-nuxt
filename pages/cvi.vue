@@ -13,7 +13,7 @@
         <div class="color color--health">--c-health</div>
         <div class="color color--physics">--c-physics</div>
         <div class="color color--human">--c-human</div>
-        <div class="color color--techonolgy">--c-techonolgy</div>
+        <div class="color color--technology">--c-technology</div>
         <div class="color color--nature">--c-nature</div>
         <div class="color color--space">--c-space</div>
       </div>
@@ -123,8 +123,8 @@ const active = ref(false)
     background: var(--c-human);
     color: #fff;
   }
-  &--techonolgy {
-    background: var(--c-techonolgy);
+  &--technology {
+    background: var(--c-technology);
     color: #fff;
   }
   &--nature {

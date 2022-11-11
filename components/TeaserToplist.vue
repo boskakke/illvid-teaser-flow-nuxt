@@ -31,7 +31,7 @@ const catNames = [
   "cat-health",
   "cat-physics",
   "cat-human",
-  "cat-techonolgy",
+  "cat-technology",
   "cat-nature",
   "cat-space",
 ];

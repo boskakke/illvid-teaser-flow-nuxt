@@ -1,30 +1,31 @@
 <template>
-  <div class="main-grid deck--primary pt-6 pb-8 mb-4 overflow-hidden">
-    <div class="main-grid--12col">
-      <div class="deck-title">
-        <div class="deck-title__label">Seneste nyt</div>
-        <div class="breaking-anim">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
+
+  <div class="deck-grid" :class="cat">
+
+     <div class="catselector">
+    <select v-model="cat" class="cat  ">
+      <option value="cat-gray">Default (Gray)</option>
+      <option value="cat-climate">Climate</option>
+      <option value="cat-health">Health</option>
+      <option value="cat-physics">Physics</option>
+      <option value="cat-human">Human</option>
+      <option value="cat-technology">Technology</option>
+      <option value="cat-nature">Nature</option>
+      <option value="cat-space">Space</option>
+    </select>
     </div>
-    <div class="main-grid--12col">
-		<NewsSlider />
-    </div>
-  </div>
-  <div class="main-grid deck--secondary overflow-hidden pt-6 pb-6">
-    <div class="main-grid--12col">
-      <div class="deck-title">
-        <div class="deck-title__label">Populært lige nu</div>
-      </div>
-    </div>
-    <div class="main-grid--12col">
-		<Toplist />
-    </div>
+    
+    <TeaserList type="toplist" title="Populært lige nu" hideDescription />
+
+    <TeaserList
+      type="latest"
+      title="Seneste nyt"
+      hideDescription
+    />
+
+    <TeaserList type="presentation" title="Hvad er klimaforandringer?" />
   </div>
 </template>
 <script setup>
-
+const cat = ref("cat-gray");
 </script>

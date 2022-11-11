@@ -2,10 +2,10 @@
   <div v-if="teasers">
     <div class="teaser-slider">
       <div class="teaser-slider__nav">
-        <button class="btn-icon btn-icon--invert teaser-slider__btn teaser-slider__btn--prev">
+        <button class="btn-icon btn-icon--invert teaser-slider__btn teaser-slider__btn--prev" :id="`slider-nav-prev-${sliderId}`" :style="`color:${sliderNavColor};`">
           <IconsChevronLeft />
         </button>
-        <button class="btn-icon btn-icon--invert teaser-slider__btn teaser-slider__btn--next">
+        <button class="btn-icon btn-icon--invert teaser-slider__btn teaser-slider__btn--next" :id="`slider-nav-next-${sliderId}`" :style="`color:${sliderNavColor};`">
           <IconsChevronRight />
         </button>
       </div>
@@ -13,7 +13,7 @@
       <swiper
         :space-between="16"
         :modules="modules"
-        :navigation="{ nextEl: '.teaser-slider__btn--next', prevEl: '.teaser-slider__btn--prev' }"
+        :navigation="{ nextEl: `#slider-nav-next-${sliderId}`, prevEl: `#slider-nav-prev-${sliderId}` }"
         grabCursor
         :breakpoints="{
           320: {
@@ -32,7 +32,7 @@
         }"
       >
         <swiper-slide v-for="(teaser, index) in 10">
-          <TeaserSlider :teaser="teaserList[index]" class="t-slider" />
+          <TeaserSlider :teaser="teaserList[index]" :show-date="showDate" class="t-slider" />
         </swiper-slide>
       </swiper>
     </div>
@@ -53,4 +53,18 @@ const teasers = await useNuxtApp().$articleFetch(
   `/wp-json/wp/v2/pages/${config.FRONTPAGE_ID}?with=contents,teasers,ancestor,contents.content.teasers.vocabularies`
 );
 const teaserList = ref(teasers.data.contents.data[0].content.data.teasers.data);
+const props = defineProps({
+  sliderId: {
+    type: String,
+    default: 1,
+  },
+  showDate: {
+    type: Boolean,
+    default: false,
+  },
+  sliderNavColor: {
+    type: String,
+    default: "#fff",
+  },
+});
 </script>

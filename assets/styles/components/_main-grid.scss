@@ -1,6 +1,6 @@
 :root {
 	--column-max-width: 78px;
-
+	--grid-gap-alt: 1.2rem;
 	@include lg-up {
 		--main-grid-gap: 0 1.2rem;
 	}
@@ -10,9 +10,26 @@
 	display: grid;
 	grid-template: auto/[full-start] minmax(.75rem, 1fr) [main-start] repeat(12, [col-start] minmax(10px, var(--column-max-width))) [main-end] minmax(.75rem, 1fr) [full-end];
 	gap: var(--main-grid-gap);
+	overflow: hidden;
 
 	&--12col {
 		grid-column: main-start / span 12;
 	}
+	&--content {
+		grid-column: main;
+		@include md-up {
+			grid-column: col-start 3 / span 8;
+		}
+	}
 }
 
+
+.grid--4col	{
+	display: grid;
+	grid-gap: var(--grid-gap-alt);
+	grid-template: auto auto / 1fr 1fr;
+	@include md-up {
+		grid-template: auto / 1fr 1fr 1fr 1fr;
+	}
+
+}

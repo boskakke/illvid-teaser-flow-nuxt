@@ -1,16 +1,5 @@
 <template>
   <a href="#" class="t" :class="[getCatName()]" :title="teaser?.title">
-    <figure class="t__figure">
-      <div class="t__category" v-if="teaser?.label.title">
-        {{ teaser.label.title }}
-      </div>
-      <nuxt-img
-        :src="`${getImgxUrl(teaser?.image?.url)}?ar=3:2&fit=crop&w=600`"
-        :placeholder="[100, 50, 10]"
-        class="t__image"
-        :alt="teaser?.image?.caption"
-      />
-    </figure>
     <div class="t__body">
       <div
         class="t__category t__category--no-figure"
@@ -27,6 +16,17 @@
         ><IconsArrowLong class="t__cta-icon"/>
       </div>
     </div>
+    <figure class="t__figure">
+      <div class="t__category" v-if="teaser?.label.title">
+        {{ teaser.label.title }}
+      </div>
+      <nuxt-img
+        :src="`${getImgxUrl(teaser?.image?.url)}?ar=3:2&fit=crop&w=600`"
+        :placeholder="[100, 50, 10]"
+        class="t__image"
+        :alt="teaser?.image?.caption"
+      />
+    </figure>
   </a>
 </template>
 
@@ -43,7 +43,7 @@ const catNames = [
   "cat-health",
   "cat-physics",
   "cat-human",
-  "cat-techonolgy",
+  "cat-technology",
   "cat-nature",
   "cat-space",
 ];

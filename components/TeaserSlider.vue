@@ -22,7 +22,7 @@
       <div class="t__category t__category--no-figure" v-if="teaser?.label?.title">
         {{ teaser?.label?.title }}
       </div>
-      <div class="t__date">
+      <div class="t__date" v-if="showDate">
         12.10.2022
       </div>
       <h2 class="t__title">{{ teaser?.title }}</h2>
@@ -39,6 +39,10 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  showDate: {
+    type: Boolean,
+    default: false,
+  }
 });
 
 const catNames = [
@@ -46,7 +50,7 @@ const catNames = [
   "cat-health",
   "cat-physics",
   "cat-human",
-  "cat-techonolgy",
+  "cat-technology",
   "cat-nature",
   "cat-space",
 ];
