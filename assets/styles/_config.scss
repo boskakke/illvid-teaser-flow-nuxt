@@ -64,6 +64,16 @@
 	--c-green: hsla(103, 47%, 49%, 1);
 
 	--c-breaking-animation: var(--c-health);
+
+	--page-title-font-size: var(--font-8);
+	@include md-up {
+		--page-title-font-size: var(--font-11);
+	}
+
+	--theme-row-padding: var(--space-4);
+	@include md-up {
+		--theme-row-padding: var(--space-8);
+	}
 }
 
 
@@ -75,7 +85,10 @@
 }
 
 %deck-padding {
-	padding: var(--space-8) 0;
+	padding: var(--space-6) 0;
+	@include md-up {
+		padding: var(--space-8) 0;
+	}
 }
 
 .deck-grid {
@@ -87,8 +100,9 @@
 .theme {
 	@extend %deck-padding;
 	background-color: var(--cat-color, var(--c-gray));
-	grid-row-gap: var(--space-8) !important;
+	grid-row-gap: var(--theme-row-padding) !important;
 	--t-title-font-weight: 800;
+	--t-margin: 0;
 
 	&--secondary {
 		@extend %deck-padding;
