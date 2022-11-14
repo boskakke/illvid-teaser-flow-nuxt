@@ -66,11 +66,13 @@
 	--c-breaking-animation: var(--c-health);
 
 	--page-title-font-size: var(--font-8);
+
 	@include md-up {
 		--page-title-font-size: var(--font-11);
 	}
 
 	--theme-row-padding: var(--space-4);
+
 	@include md-up {
 		--theme-row-padding: var(--space-8);
 	}
@@ -86,6 +88,7 @@
 
 %deck-padding {
 	padding: var(--space-6) 0;
+
 	@include md-up {
 		padding: var(--space-8) 0;
 	}
@@ -94,15 +97,20 @@
 .deck-grid {
 	display: grid;
 	grid-template: auto / 1fr;
-	grid-gap: 2rem;
+	gap: 2rem;
 }
 
 .theme {
+	--t-title-font-weight: 800;
+	--t-margin: 0;
+	position: relative;
 	@extend %deck-padding;
 	background-color: var(--cat-color, var(--c-gray));
 	grid-row-gap: var(--theme-row-padding) !important;
-	--t-title-font-weight: 800;
-	--t-margin: 0;
+	z-index: 0;
+	@include sm-down {
+		grid-gap: var(--space-7) 0 !important;
+	}
 
 	&--secondary {
 		@extend %deck-padding;
@@ -114,6 +122,36 @@
 		@extend %deck-padding;
 		background-color: var(--c-primary);
 		grid-row-gap: var(--space-8) !important;
+	}
+
+	&--white {
+		--t-link-color: #fff;
+		--t-link-color-hover: #fff;
+		color: #fff;
+	}
+
+	&__background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(to top, rgba(black, .8), rgba(black, .6));
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 

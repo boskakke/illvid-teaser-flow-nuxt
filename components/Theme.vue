@@ -1,5 +1,5 @@
 <template >
-  <div class="main-grid theme theme theme--default">
+  <div class="main-grid theme theme--default">
     <div class="main-grid--12col">
       <a class="t-list-theme" href="#">
         <span class="t-list-theme__label">Tema - Grøn revolution</span>
@@ -21,5 +21,6 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  
 });
 </script>

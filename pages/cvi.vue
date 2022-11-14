@@ -1,5 +1,5 @@
 <template>
-  <div class="main-grid">
+  <div class="main-grid mb-8">
     <div class="main-grid--12col">
       
       <h2>Colors</h2>
@@ -81,6 +81,10 @@
       </button>
       </div>
     </div>
+    <div class="main-grid--12col">
+      <h2>Tags</h2>
+      <CategoryTags class="mt-6" />
+    </div>
   </div>
 </template>
 
@@ -89,7 +93,7 @@
 const active = ref(false)
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .color {
   width: 100px;
   aspect-ratio: 1 / 1;
@@ -156,4 +160,9 @@ code {
   background: var(--c-body);
   display: inline-block;
 }
+
+.h2 {
+  margin-top: var(--space-8);
+}
+
 </style>

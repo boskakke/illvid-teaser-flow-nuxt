@@ -1,17 +1,38 @@
 <template>
   <div v-if="teasers" :class="cat" class="deck-grid">
     <div class="catselector">
-    <select v-model="cat" class="cat  ">
-      <option value="cat-gray">Default (Gray)</option>
-      <option value="cat-climate">Climate</option>
-      <option value="cat-health">Health</option>
-      <option value="cat-physics">Physics</option>
-      <option value="cat-human">Human</option>
-      <option value="cat-technology">Technology</option>
-      <option value="cat-nature">Nature</option>
-      <option value="cat-space">Space</option>
-    </select>
+      <select v-model="cat" class="cat">
+        <option value="cat-gray">Default (Gray)</option>
+        <option value="cat-climate">Climate</option>
+        <option value="cat-health">Health</option>
+        <option value="cat-physics">Physics</option>
+        <option value="cat-human">Human</option>
+        <option value="cat-technology">Technology</option>
+        <option value="cat-nature">Nature</option>
+        <option value="cat-space">Space</option>
+      </select>
     </div>
+
+     <TeaserList
+      type="presentation"
+      description
+      title="Hvad betyder grøn revolution for vores fremtid?"
+    />
+     <TeaserList
+      type="presentation"
+      description
+      title="Hvad betyder grøn revolution for vores fremtid?"
+    />
+     <TeaserList
+      type="presentation"
+      description
+      title="Hvad betyder grøn revolution for vores fremtid?"
+    />
+     <TeaserList
+      type="presentation"
+      description
+      title="Hvad betyder grøn revolution for vores fremtid?"
+    />
 
     <PageTitle title="Natur" />
 
@@ -19,24 +40,29 @@
 
     <TeaserflowTeaserFlow6 />
 
-    <Theme :teaser="teaserList[3]"  />
-
-    <TeaserList type="presentation" title="Hvad er klimaforandringer?" />
-
-    <TeaserflowTeaserFlow3 widget="flex-teaser-list"/>
+    <Theme :teaser="teaserList[3]" />
 
     <TeaserList
       type="presentation"
-      title="Hvad betyder grøn revolution for vores fremtid?"
-      
+      title="Hvad er klimaforandringer?"
+      description
     />
 
-    <TeaserflowTeaserFlow6 widget="flex-teaser-list"/>
+    <TeaserflowTeaserFlow3 widget="flex-teaser-list" />
 
     <TeaserList
       type="presentation"
+      description
       title="Hvad betyder grøn revolution for vores fremtid?"
-      
+      backgroundImage="https://images-bonnier.imgix.net/files/ill/production/2019/03/19143852/universet.jpg?h=1024&q=60&auto=format"
+    />
+
+    <TeaserflowTeaserFlow6 widget="flex-teaser-list" />
+
+    <TeaserList
+      type="presentation"
+      description
+      title="Hvad betyder grøn revolution for vores fremtid?"
     />
 
     <TeaserflowTeaserFlow3 widget="flex-teaser-list" />
@@ -69,11 +95,5 @@ provide("settings", settings);
 <style lang="scss">
 address {
   display: none;
-}
-.catselector {
-  position: fixed;
-  top: 0;
-  padding: var(--space-2);
-  background: #fff;;  
 }
 </style>

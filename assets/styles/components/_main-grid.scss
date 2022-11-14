@@ -1,6 +1,9 @@
 :root {
 	--column-max-width: 78px;
-	--grid-gap-alt: 1.2rem;
+	--grid-gap-alt: 1.2rem .6rem;
+	@include md-up {
+		--grid-gap-alt: 1.2rem;
+	}
 	@include lg-up {
 		--main-grid-gap: 0 1.2rem;
 	}

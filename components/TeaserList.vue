@@ -1,7 +1,11 @@
 <template>
   <div class="main-grid" :class="getClass" widget="teaser-list">
+    <div class="theme__background" v-if="backgroundImage">
+      <img :src="backgroundImage" alt="" class="theme__image" />
+    </div>
+
     <div class="main-grid--12col">
-      <div v-if="type === 'latest'" class="widget-title widget-title--alt">
+      <div v-if="type === 'latest'" class="widget__title widget__title--alt">
         <span>Seneste nyt</span>
         <div class="breaking-anim">
           <span></span>
@@ -9,11 +13,11 @@
           <span></span>
         </div>
       </div>
-      <div class="widget-title" v-else>
+      <div v-else class="widget__title">
         {{ title }}
       </div>
 
-      <div class="editor widget-description" v-if="!hideDescription">
+      <div class="editor widget__description" v-if="description">
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe
           incidunt harum dignissimos cum adipisci cupiditate tenetur eum facere
@@ -24,8 +28,12 @@
     </div>
 
     <TeaserListToplist v-if="type === 'toplist'" />
-    <TeaserListPresentation v-if="type === 'presentation'" />
+    <TeaserListPresentation
+      v-if="type === 'presentation'"
+      backgroundImage="backgroundImage"
+    />
     <TeaserListLatest v-if="type === 'latest'" />
+
   </div>
 </template>
 
@@ -39,20 +47,31 @@ const props = defineProps({
     type: String,
     required: false,
   },
-  hideDescription: {
+  description: {
     type: Boolean,
     required: false,
   },
+  backgroundImage: {
+    type: String,
+    required: false,
+    default: null,
+  },
+  
 });
 
 // make shure toplist is always gray
 const getClass = computed(() => {
+  let className = "";
   if (props.type === "toplist") {
-    return "theme--secondary";
+    className += "theme--secondary";
   } else if (props.type === "latest") {
-    return "theme--primary";
+    className += "theme--primary";
   } else {
-    return "theme";
+    className += "theme";
   }
+  if (props.backgroundImage) {
+    className += " theme--white";
+  }
+  return className;
 });
 </script>

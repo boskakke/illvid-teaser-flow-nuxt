@@ -61,9 +61,9 @@
       :class="{ demo: settings.showPalette }"
     />
 
-    <TeaserList type="latest" title="Seneste nyt" hideDescription class="theme--primary theme" />
+    <TeaserList type="latest" title="Seneste nyt"  class="theme--primary theme" />
     
-    <TeaserList type="toplist" title="Populært lige nu" hideDescription />
+    <TeaserList type="toplist" title="Populært lige nu"  />
 
     <Theme :teaser="teaserList[3]" />
   </div>

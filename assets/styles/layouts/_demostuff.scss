@@ -1,4 +1,3 @@
-
 .teaserControls {
 	position: absolute;
 	bottom: 0;
@@ -20,6 +19,7 @@
 	top: 1rem;
 	color: #999;
 	font-size: var(--font-4);
+
 	label {
 		cursor: pointer;
 	}
@@ -63,4 +63,12 @@
 	&.active {
 		background: rgb(255, 255, 255, 20%);
 	}
+}
+
+.catselector {
+	position: fixed;
+	top: 0;
+	padding: var(--space-2);
+	background: #fff;
+	z-index: 10;
 }

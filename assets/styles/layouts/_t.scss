@@ -40,6 +40,9 @@
 		font-weight: 800;
 		font-family: var(--font-alt);
 		line-height: 1;
+		@include md-up {
+			font-size: var(--font-5);
+		}
 		svg {
 			width: 1.4rem;
 			height: auto;
@@ -55,7 +58,7 @@
 	&__title {
 		font-size: var(--t-font-size, 40px);
 		margin: var(--t-title-margin, 0);
-		font-weight: var(--t-title-font-weight, 700);
+		font-weight: var(--t-title-font-weight, 800);
 		line-height: var(--t-title-line-height, 1.1);
 		font-family: var(--t-font-family);
 	}

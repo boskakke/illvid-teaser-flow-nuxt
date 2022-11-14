@@ -3,7 +3,7 @@
 	--t-gap: var(--space-3);
 	--t-main-font-size: var(--font-12);
 	--t-font-family: var(--font-alt);
-	--t-title-font-weight: 900;
+	--t-title-font-weight: 800;
 	--t-text-decoration-hover: none;
 	--t-image-transition: transform .3s ease-in-out;
 	--flex-list-grid-gap: 0;
@@ -159,6 +159,7 @@
 
 .t-main {
 	--t-flex-direction: column;
+	--t-title-font-weight: 900;
 	--t-font-size: var(--t-main-font-size);
 	--t-title-line-height: var(--t-main-title-line-height);
 }
