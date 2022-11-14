@@ -13,7 +13,7 @@
       </select>
     </div>
 
-     <TeaserList
+     <!-- <TeaserList
       type="presentation"
       description
       title="Hvad betyder grøn revolution for vores fremtid?"
@@ -32,11 +32,13 @@
       type="presentation"
       description
       title="Hvad betyder grøn revolution for vores fremtid?"
-    />
+    /> -->
 
     <PageTitle title="Natur" />
 
-    <SeoText />
+    <SeoText>
+      <CategoryTags class="mt-6" />
+    </SeoText>
 
     <TeaserflowTeaserFlow6 />
 

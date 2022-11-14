@@ -21,7 +21,7 @@
       <h2 class="main-grid--12col">SEO text w. tags</h2>
     </div>
     <SeoText>
-      <CategoryTags class="mt-6" />
+      <CategoryTags class="mt-6 mb-6" />
     </SeoText>
 
     <div class="main-grid">
